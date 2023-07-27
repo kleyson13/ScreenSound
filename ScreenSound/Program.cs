@@ -1,16 +1,15 @@
-﻿Musica musica1 = new Musica();
-musica1.Nome = "Roxane";
-musica1.Artista = "The Police";
-musica1.Duracao = 273;
-musica1.Disponivel = true;
-Console.WriteLine(musica1.Disponivel);
+﻿Album albumDoParamore = new Album();
+albumDoParamore.Nome = "All We Know Is Falling";
+
+Musica musica1 = new Musica();
+musica1.Nome = "Pressure";
+musica1.Duracao = 186;
 
 Musica musica2 = new Musica();
-musica2.Nome = "Vertigo";
-musica2.Artista = "U2";
-musica2.Duracao = 367;
-musica2.Disponivel = true;
-Console.WriteLine(musica2.Disponivel);
+musica2.Nome = "Emergency";
+musica2.Duracao = 179;
 
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
+albumDoParamore.AdicionarMusica(musica1);
+albumDoParamore.AdicionarMusica(musica2);
+
+albumDoParamore.ExibirMusicasDoAlbum();
