@@ -2,11 +2,6 @@
 {
     private List<Musica> musicas = new List<Musica>();
 
-    public Album()
-    {
-        
-    }
-
     public Album(string nome)
     {
         Nome = nome;
