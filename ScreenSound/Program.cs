@@ -1,15 +1,26 @@
-﻿Album albumDoParamore = new Album();
-albumDoParamore.Nome = "All We Know Is Falling";
+﻿Banda paramore = new Banda("Paramore");
 
-Musica musica1 = new Musica();
-musica1.Nome = "Pressure";
-musica1.Duracao = 186;
+Album albumDoParamore = new Album("All We Know Is Falling");
 
-Musica musica2 = new Musica();
-musica2.Nome = "Emergency";
-musica2.Duracao = 179;
+Musica musica1 = new Musica(paramore, "Pressure")
+{
+    Duracao = 186,
+    Disponivel = true,
+};
+
+
+Musica musica2 = new Musica(paramore, "Emergency")
+{
+    Duracao = 179,
+    Disponivel = false,
+};
+
 
 albumDoParamore.AdicionarMusica(musica1);
 albumDoParamore.AdicionarMusica(musica2);
+paramore.AdicionarAlbum(albumDoParamore);
 
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
 albumDoParamore.ExibirMusicasDoAlbum();
+paramore.ExibirDiscografia();
