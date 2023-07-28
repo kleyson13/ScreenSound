@@ -1,26 +1,13 @@
-﻿Banda paramore = new Banda("Paramore");
+﻿Episodio ep1 = new(2, "Técnicas de facilitação", 45);
+ep1.AdicionarConvidados("Maria");
+ep1.AdicionarConvidados("Marcelo");
 
-Album albumDoParamore = new Album("All We Know Is Falling");
+Episodio ep2 = new(1, "Técnicas de aprendizado", 67);
+ep2.AdicionarConvidados("Fernando");
+ep2.AdicionarConvidados("Marcos");
+ep2.AdicionarConvidados("Flávia");
 
-Musica musica1 = new Musica(paramore, "Pressure")
-{
-    Duracao = 186,
-    Disponivel = true,
-};
-
-
-Musica musica2 = new Musica(paramore, "Emergency")
-{
-    Duracao = 179,
-    Disponivel = false,
-};
-
-
-albumDoParamore.AdicionarMusica(musica1);
-albumDoParamore.AdicionarMusica(musica2);
-paramore.AdicionarAlbum(albumDoParamore);
-
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
-albumDoParamore.ExibirMusicasDoAlbum();
-paramore.ExibirDiscografia();
+Podcast podcast = new("Podcast especial", "Kleyson");
+podcast.AdicionarEpisodio(ep1);
+podcast.AdicionarEpisodio(ep2);
+podcast.ExibirDetalhes();
